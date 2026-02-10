@@ -1,6 +1,7 @@
 package com.uahb.scolarite.app.domain.entity.annee;
 
 import com.uahb.scolarite.app.domain.event.EventAggregateRoot;
+import com.uahb.scolarite.app.domain.event.anneeacademique.AnneeAcademiqueEvent;
 import com.uahb.scolarite.app.domain.exception.ScolariteException;
 
 import java.time.LocalDate;
@@ -29,7 +30,7 @@ public class AnneeAcademique  extends EventAggregateRoot {
         initialiserDate(calendrierScolaire);
         verifierNombreDeMoisScolaire();
         moisAcademiqueList = genererMoisAcademique();
-        addEvent(new);
+       // addEvent(new AnneeAcademiqueEvent(this));
     }
 
     public void modifier(CalendrierScolaire calendrierScolaire){
