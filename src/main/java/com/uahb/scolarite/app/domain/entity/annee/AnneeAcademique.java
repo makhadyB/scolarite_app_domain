@@ -74,7 +74,7 @@ public class AnneeAcademique  extends EventAggregateRoot {
 
     private void initialiserDate(CalendrierScolaire calendrierScolaire){
         if (!calendrierScolaire.getDateOuverture().isBefore(calendrierScolaire.getDateFermeture())){
-            throw new ScolariteException("La date de debut de l'année doit etre antérieure à la date de fermeture de l'année");
+            throw new ScolariteException("La date de debut de l'année doit être antérieure à la date de fermeture de l'année");
         }
 
         if (!calendrierScolaire.getDateOuvertureInscription().isBefore(calendrierScolaire.getDateFermetureInscription())){
