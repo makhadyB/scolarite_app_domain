@@ -1,9 +1,11 @@
-FROM eclipse-temurin:21-jre
-
+# Utilisez une image de base avec Java
+FROM eclipse-temurin:21-jdk
+# Définir le répertoire de travail dans le conteneur
 WORKDIR /app
-
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-
+# Copier le fichier jar généré dans le conteneur
+COPY target/*.jar app.jar
+# Exposer le port sur lequel Spring Boot écoute
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+# Commande pour lancer l'application Spring Boot
+ENTRYPOINT ["java", "-jar", "/app/docker-demo.jar"]
+
