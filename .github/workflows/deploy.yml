@@ -67,4 +67,3 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
-
