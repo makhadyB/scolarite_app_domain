@@ -136,7 +136,7 @@ public class AnneeAcademique  extends EventAggregateRoot {
             }
         }
         throw new ScolariteException(
-                "Action interdite : " + action + " dans l'état " + this.statut
+                "Action est  interdite : " + action + " dans l'état " + this.statut
         );
     }
 
